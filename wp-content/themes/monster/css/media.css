@@ -1,0 +1,109 @@
+@media only screen and (max-width: 1200px) {
+	.features-item p {
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.about-block h2,
+	.features-block h2,
+	.advantages-block h2,
+	.testimonials-block h2,
+	.team-block h2,
+	.faq-block h2,
+	.work-block h2,
+	.latest-block h2,
+	.partners-block h2,
+	.contact-block h2 {
+		margin-top:80px;
+		margin-bottom: 25px;
+	}
+	.faq-block h2 {
+		margin-bottom:80px;
+	}
+	.about-block .col-md-5:last-child {
+		margin-bottom: 70px;
+	}
+	.team-block .col-md-3 {
+		margin-bottom: 70px;
+	}
+	.work-block iframe {
+		margin-top: 70px;
+	}
+	.work-block h4 {
+		margin-bottom: 25px;
+	}
+	.work-block p {
+		margin-bottom: 70px;
+	}
+	.partners-block .col-sm-3:last-child {
+		margin-bottom: 70px;
+	}
+	.contact-block h4 {
+		margin-top: 60px;
+	}
+	.latest-block .col-sm-6:last-child {
+		margin-bottom: 80px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.head-descr-big {
+		font-size: 72px;
+	}
+	.head-titl {
+		font-size: 46px;
+	}
+	.head-descr {
+		font-size: 30px;
+	}
+	.faq-block h2 {
+		margin-bottom: 20px;
+	}
+	.about-block h2,
+	.features-block h2,
+	.advantages-block h2,
+	.testimonials-block h2,
+	.team-block h2,
+	.faq-block h2,
+	.work-block h2,
+	.latest-block h2,
+	.partners-block h2,
+	.contact-block h2 {
+		margin-top:50px;
+	}
+	.work-block h4 {
+		margin-bottom: 15px;
+	}
+	.blue-circle {
+		margin: 15px auto;
+	}
+	.about-block h3 {
+		margin-top: 5px;
+		text-align: center;
+	}
+	.partners-block img {
+	    vertical-align: top;
+	    width: 75%;
+	}
+}
+@media only screen and (max-width: 440px) {
+	.partners-block img {
+	    vertical-align: top;
+	    width: 100%;
+	}
+	.head-descr-big {
+		font-size: 50px;
+	}
+	.head-titl {
+		font-size: 46px;
+	}
+	.head-descr {
+		font-size: 24px;
+	}
+}
+@media screen and (max-device-width: 800px) {
+	html { background: url(../videos/video-bg.jpg) #000 no-repeat center center fixed; }
+	#bgvid { display: none; }
+}
+@media screen and (min-width: 1200px) {
+
+}

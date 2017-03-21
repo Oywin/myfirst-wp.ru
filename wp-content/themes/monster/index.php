@@ -1,22 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/**
+ * The Header for our theme
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
+ */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<?php bloginfo('description'); ?>">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Template Test</title>
-
+  <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+  <!-- <title>Template Test</title> -->
+  <?php wp_head(); ?>
   <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/material-icons.css" rel="stylesheet">
-  <link href="css/fonts.css" rel="stylesheet">
-  <link href="css/header.css" rel="stylesheet">
-  <link href="<?php bloginfo('stylesheet_url') ?>" rel="stylesheet">
-  <link href="css/media.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="libs/magnific/magnific-popup.css" rel="stylesheet">
-  <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+  <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/material-icons.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/fonts.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/header.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/media.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/libs/magnific/magnific-popup.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/fancybox/jquery.fancybox.css" />
   
 
   
@@ -28,7 +40,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <header id="top">
       <video poster="videos/video-bg.jpg" id="bgvid" playsinline autoplay muted loop>
         <source src="videos/video-bg.mp4" type="video/mp4">
@@ -84,9 +96,9 @@
                       <li class="button"><a href="#" class="box4">Blogs</a></li>
                       <li class="dropdown">
                         <ul>
-                          <li><a href="#">Images</a></li>
-                          <li><a href="#">Images</a></li>
-                          <li><a href="#">Images</a></li>
+                          <li><a href="#"><?php echo get_template_directory_uri(); ?>/images</a></li>
+                          <li><a href="#"><?php echo get_template_directory_uri(); ?>/images</a></li>
+                          <li><a href="#"><?php echo get_template_directory_uri(); ?>/images</a></li>
                         </ul>
                       </li>
                     </ul>         
@@ -245,7 +257,7 @@
             </div>
           </div>
           <div class="col-md-6 boy-img text-center">
-            <img src="images/boy.jpg" alt="boy">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/boy.jpg" alt="boy">
           </div>
         </div>
       </div>
@@ -322,7 +334,7 @@
       <div class="container">
         <h2 class="text-center">Testimonials</h2>
         <div class="text-center blockquotes">
-          <img src="images/blockquotes.png" alt="Blockquotes">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/blockquotes.png" alt="Blockquotes">
         </div>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -336,13 +348,13 @@
 
             <div class="item active text-center">
               <p>Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
-              <img src="images/first_slide_pic.png" alt="slide">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/first_slide_pic.png" alt="slide">
               <h3>Rob Singer, Web Developer</h3>
             </div>
 
             <div class="item text-center">
               <p>Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis.</p>
-              <img src="images/second_slide_pic.png" alt="slide">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/second_slide_pic.png" alt="slide">
               <h3>Alan Johnson, SEO</h3>
             </div>
 
@@ -357,25 +369,25 @@
         <h2 class="text-center">Our Team</h2>
         <div class="row">
           <div class="col-md-3 col-sm-6 text-center">
-            <img src="images/team_1.jpg" alt="team">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/team_1.jpg" alt="team">
             <h3>Alan Sobakovich</h3>
             <h5>Founder</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
           </div>
           <div class="col-md-3 col-sm-6 text-center">
-            <img src="images/team_2.jpg" alt="team">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/team_2.jpg" alt="team">
             <h3>John Mu</h3>
             <h5>Product Manager</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
           </div>
           <div class="col-md-3 col-sm-6 text-center">
-            <img src="images/team_3.jpg" alt="team">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/team_3.jpg" alt="team">
             <h3>Melissa Jade</h3>
             <h5>Designer</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
           </div>
           <div class="col-md-3 col-sm-6 text-center">
-            <img src="images/team_4.jpg" alt="team">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/team_4.jpg" alt="team">
             <h3>Greg Mercury</h3>
             <h5>Developer</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
@@ -547,31 +559,31 @@
     <div class="row">
       <div class="col-sm-3 col-xs-6">
 
-        <a class="gallery" href="#testube"><img alt="" src="images/full_1.jpg" /></a>
+        <a class="gallery" href="#testube"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/full_1.jpg" /></a>
 
         <div style="display:none">
-          <a class="fancybox" id="testube" data-fancybox-group="group"><img src="images/full_1.jpg" />
+          <a class="fancybox" id="testube" data-fancybox-group="group"><img src="<?php echo get_template_directory_uri(); ?>/images/full_1.jpg" />
           </div>
         </div>
         <div class="col-sm-3 col-xs-6">
-          <a class="gallery" href="#testube2"><img alt="" src="images/full_2.jpg" /></a>
+          <a class="gallery" href="#testube2"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/full_2.jpg" /></a>
 
           <div style="display:none">
-            <a class="fancybox" id="testube2" data-fancybox-group="group"><img src="images/full_2.jpg" />
+            <a class="fancybox" id="testube2" data-fancybox-group="group"><img src="<?php echo get_template_directory_uri(); ?>/images/full_2.jpg" />
             </div>
           </div>
           <div class="col-sm-3 col-xs-6">
-            <a class="gallery" href="#testube3"><img alt="" src="images/full_3.jpg" /></a>
+            <a class="gallery" href="#testube3"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/full_3.jpg" /></a>
 
             <div style="display:none">
-              <a class="fancybox" id="testube3" data-fancybox-group="group"><img src="images/full_3.jpg" />
+              <a class="fancybox" id="testube3" data-fancybox-group="group"><img src="<?php echo get_template_directory_uri(); ?>/images/full_3.jpg" />
               </div>
             </div>
             <div class="col-sm-3 col-xs-6">
-              <a class="gallery" href="#testube4"><img alt="" src="images/full_4.jpg" /></a>
+              <a class="gallery" href="#testube4"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/full_4.jpg" /></a>
 
               <div style="display:none">
-                <a class="fancybox" id="testube4" data-fancybox-group="group"><img src="images/full_4.jpg" />
+                <a class="fancybox" id="testube4" data-fancybox-group="group"><img src="<?php echo get_template_directory_uri(); ?>/images/full_4.jpg" />
                 </div>
               </div>
             </div>
@@ -598,7 +610,7 @@
                           <a class="gallery" href="#testube5"></a>
 
                           <div style="display:none">
-                            <a class="fancybox" id="testube5" data-fancybox-group="group"><img src="images/poppup_1.jpg" />
+                            <a class="fancybox" id="testube5" data-fancybox-group="group"><img src="<?php echo get_template_directory_uri(); ?>/images/poppup_1.jpg" />
                             </div>
                           </div>
                         </div>
@@ -616,7 +628,7 @@
                           <div class="little-circle material-icons-launch text-center"><a class="gallery" href="#testube6"></a>
 
                             <div style="display:none">
-                              <a class="fancybox" id="testube6" data-fancybox-group="group">333<img src="images/poppup_2.jpg" /></div>
+                              <a class="fancybox" id="testube6" data-fancybox-group="group">333<img src="<?php echo get_template_directory_uri(); ?>/images/poppup_2.jpg" /></div>
                               </div>
                             </div>
                           </div> 
@@ -635,17 +647,17 @@
                         </div>
                         <div class="col-sm-3 col-sm-offset-1 text-center">
                           <a href="#">
-                            <img src="images/partners_1.jpg" alt="Partners">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/partners_1.jpg" alt="Partners">
                           </a>
                         </div>
                         <div class="col-sm-3 text-center">
                           <a href="#">
-                            <img src="images/partners_2.jpg" alt="Partners">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/partners_2.jpg" alt="Partners">
                           </a>
                         </div>
                         <div class="col-sm-3 text-center">
                           <a href="#">
-                            <img src="images/partners_3.jpg" alt="Partners">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/partners_3.jpg" alt="Partners">
                           </a>
                         </div> 
                       </div>
@@ -684,10 +696,10 @@
                   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                   <!-- Include all compiled plugins (below), or include individual files as needed -->
-                  <script src="js/bootstrap.min.js"></script>
-                  <script src="libs/stellar/jquery.stellar.min.js"></script>
-                  <script src="libs/magnific/jquery.magnific-popup.min.js"></script>
-                  <script src="js/common.js"></script>
-                  <script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+                  <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+                  <script src="<?php echo get_template_directory_uri(); ?>/libs/stellar/jquery.stellar.min.js"></script>
+                  <script src="<?php echo get_template_directory_uri(); ?>/libs/magnific/jquery.magnific-popup.min.js"></script>
+                  <script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
+                  <script src="<?php echo get_template_directory_uri(); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
                 </body>
                 </html>
